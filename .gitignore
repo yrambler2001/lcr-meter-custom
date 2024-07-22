@@ -1,0 +1,7 @@
+*.o
+*.o.d
+/ComponentTester
+*.eep
+*.hex
+*.lss
+*.map
