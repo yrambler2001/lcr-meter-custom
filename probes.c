@@ -3,7 +3,7 @@
  *   probing testpins
  *
  *   (c) 2012-2022 by Markus Reschke
- *   based on code from Markus Frejek and Karl-Heinz Kübbeler
+ *   based on code from Markus Frejek and Karl-Heinz Kï¿½bbeler
  *
  * ************************************************************************ */
 
@@ -171,8 +171,8 @@ uint8_t ShortedPair(uint8_t Probe1, uint8_t Probe2)
    *  to be half of Vcc (allowed difference +/- 30mV).
    */
 
-  Min = (Cfg.Vcc / 2) - 30;        /* lower voltage */
-  Max = (Cfg.Vcc / 2) + 30;        /* upper voltage */
+  Min = (Cfg.Vcc / 2) - 40;        /* lower voltage */
+  Max = (Cfg.Vcc / 2) + 40;        /* upper voltage */
 
   if ((U1 > Min) && (U1 < Max))    /* U1 within window */
   { 
@@ -950,7 +950,7 @@ void CheckProbes(uint8_t Probe1, uint8_t Probe2, uint8_t Probe3)
    *  - high hFE Darlington plus long probe leads and/or noisy environment
    */
 
-  if (U_Rl > 15)         /* > 21µA */
+  if (U_Rl > 15)         /* > 21ï¿½A */
   {
     if (Check.Done == DONE_NONE)        /* not sure yet */
     {
