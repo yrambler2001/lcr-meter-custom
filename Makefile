@@ -1,6 +1,6 @@
 
 ALL_PROJECTS := \
-       mega644_T7_Mod
+       mega328_TC1
 
 
 .PHONY: all steril clean $(ALL_PROJECTS)

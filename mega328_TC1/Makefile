@@ -3,7 +3,7 @@
 ###############################################################################
 
 ## General Flags
-PROJECT = mega644_T7-Mod
+PROJECT = mega328_TC1
 
 CC = avr-gcc
 
