@@ -25,7 +25,7 @@ CFLAGS = -Wall
 # atmega1284: m1284p
 # atmega1280: m1280	// see config.h for different port setting
 # atmega2560: m2560	// see config.h for different port setting
-PARTNO = m644
+PARTNO = m328p
 #PARTNO = m1284p
 
 # The WITH_MENU option enables a dialog to choose some additional functions.
@@ -36,12 +36,12 @@ CFLAGS += -DWITH_MENU
 CFLAGS += -DMAX_MENU_LINES=8
 #
 # For ATmega328 the menu function "rotary encoder check" is only enabled with the WITH_ROTARY_CHECK option.
-CFLAGS += -DWITH_ROTARY_CHECK
+#CFLAGS += -DWITH_ROTARY_CHECK
 #
 # Option NO_FREQ_COUNTER will disable the frequency counter function.
 #CFLAGS += -DNO_FREQ_COUNTER
 # Counter is enabled, but option NO_FREQUENCY_SWITCH will disable selection of different sources for mega644/1284.
-CFLAGS += -DNO_FREQUENCY_SWITCH=1
+#CFLAGS += -DNO_FREQUENCY_SWITCH=1
 
 # With the menu item "Show data" the used icons and the font data are displayed for
 # graphical displays after the presentation of calibration data.
@@ -148,13 +148,13 @@ CFLAGS += -DLCD_ST7565_H_FLIP=0
 # With LCD_ST7565_H_OFFSET you can specify a horizontal pixel offset to the display window.
 # The controller knows 132 horizontal pixel, the window shows only 128 pixel.
 # OFFSET values can vary for the connected display type to 0, 2 or 4.
-CFLAGS += -DLCD_ST7565_H_OFFSET=4
+CFLAGS += -DLCD_ST7565_H_OFFSET=2
 # If LCD_ST7565 option is set to 1: Flip the display's vertical direction
 CFLAGS += -DLCD_ST7565_V_FLIP=1
 # With LCD_ST7565_V_OFFSET you can specify a vertical pixel offset to the display window.
 # The controller knows 132 vertical pixel, the window shows only 128 pixel.
 # OFFSET values can vary for the connected display type to 0, 2 or 4.
-CFLAGS += -DLCD_ST7565_V_OFFSET=4
+CFLAGS += -DLCD_ST7565_V_OFFSET=3
 
 # The contrast value can be predefined with the constant VOLUME_VALUE
 # for ST7565 controller the value can be between 0 and 63, for the SSD1306 0 to 255 can be selected.
@@ -204,7 +204,7 @@ CFLAGS += -DBIG_TP
 # Option STRIP_GRID_BOARD selects different board-layout, do not set for standard board!
 # The connection of LCD is totally different for both versions.
 # The T7 tester model use a different layout 
-CFLAGS += -DSTRIP_GRID_BOARD=7
+CFLAGS += -DSTRIP_GRID_BOARD=2
 
 # The WITH_SELFTEST option enables selftest function (only for mega168 or mega328) including the calibration.
 # Normally the mega168 uses selftest without T1 to T7 to enable both hFE measurements.
@@ -241,11 +241,11 @@ WITH_SamplingADC = 1
 
 # Option WITH_XTAL enables additional Xtal / Ceramic resonator tests.
 # Option can be set only together with SamplingADC=1 and OP_MHZ=16
-CFLAGS += -DWITH_XTAL 
+#CFLAGS += -DWITH_XTAL 
 # Option WITH_UJT enables additional tests for UJT (UniJunction Transistor)
-CFLAGS += -DWITH_UJT
+#CFLAGS += -DWITH_UJT
 # Option WITH_PUT enables additional tests for PUT (Programmable Unijunction Transistor)
-CFLAGS += -DWITH_PUT
+#CFLAGS += -DWITH_PUT
 # Option FET_Idss will measure the Idss parameter for FETs, if not estimated > 40mA.
 CFLAGS += -DFET_Idss
 
